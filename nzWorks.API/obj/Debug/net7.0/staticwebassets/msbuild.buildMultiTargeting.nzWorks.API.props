@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\nzWorks.API.props" />
+</Project>
