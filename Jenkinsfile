@@ -7,7 +7,7 @@ pipeline {
         RESOURCE_GROUP = 'MallikharjunaReddy'
         AZURE_CREDENTIALS_ID = 'a37d4b17-57b1-4bd8-984e-07b8a42d4547' // Jenkins credential ID for Azure Service Principal
         DOCKER_IMAGE_NAME = 'jenkins'
-        DOCKERFILE_PATH = 'jenkins123/Dockerfile'
+        DOCKERFILE_PATH = 'Dockerfile'
     }
 
     stages {
