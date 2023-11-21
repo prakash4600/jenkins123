@@ -40,6 +40,8 @@ pipeline {
             steps {
                 script {
                     // Tag the Docker image for ACR
+                    def home = sh(script: 'echo $HOME', returnStdout: true).trim()
+                    env.HOME = home
                     def acrServer = "${ACR_NAME}.azurecr.io"
                     def dockerImageTag = "${acrServer}/${DOCKER_IMAGE_NAME}:${env.BUILD_ID}"
                     docker.image("${DOCKER_IMAGE_NAME}:${env.BUILD_ID}").tag(dockerImageTag)
